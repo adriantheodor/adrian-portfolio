@@ -64,4 +64,24 @@
   section {
     padding: 2em;
   }
+
+  .banner {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--charcoal);
+    color: var(--ivory);
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted-olive);
+  }
+  
+  .banner h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--slate-blue);
+  }
+  
   
