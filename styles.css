@@ -22,6 +22,23 @@
     text-align: center;
     padding: 1.5em;
   }
+
+  .magic-button {
+    background-color: var(--muted-olive);
+    color: var(--ivory);
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .magic-button:hover {
+    background-color: var(--soft-gold);
+    color: var(--charcoal);
+  }
+  
   
   a {
     color: var(--slate-blue);
@@ -32,10 +49,18 @@
     color: var(--soft-gold);
   }
   
-  h1, h2 {
-    margin: 0.5em 0;
+  h1 {
+    color: var(--soft-gold);
+    font-size: 2.5rem;
+    text-align: center;
   }
   
+  h2 {
+    color: var(--slate-blue);
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+  }
+
   section {
     padding: 2em;
   }
