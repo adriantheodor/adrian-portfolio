@@ -21,10 +21,39 @@
     <section id="projects">
         <button class="magic-button">View Projects</button>
     </section>
+
+    <section class="contact-section">
+        <h3>Contact Me</h3>
+        <ul>
+          <li>
+            📧 Email: <span id="email">aatheodor@gmail.com</span>
+            <button onclick="copyToClipboard('email')">Copy</button>
+          </li>
+          <li>
+            📞 Phone: <span id="phone">610-297-6314</span>
+            <button onclick="copyToClipboard('phone')">Copy</button>
+          </li>
+          <li>
+            🔗 LinkedIn:
+            <a href="https://www.linkedin.com/in/adrian-theodor-8b19846b/" target="_blank">
+              View Profile
+            </a>
+          </li>
+        </ul>
+      </section>
+      
   </main>
 
   <footer>
     <p>© 2025 Adrian Theodor</p>
   </footer>
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert(`Copied: ${text}`);
+      });
+    }
+  </script>
 </body>
 </html>

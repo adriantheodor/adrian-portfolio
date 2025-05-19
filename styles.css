@@ -83,5 +83,45 @@
     font-weight: 300;
     color: var(--slate-blue);
   }
+
+  .contact-section {
+    background-color: var(--charcoal);
+    color: var(--ivory);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .contact-section h3 {
+    font-size: 2rem;
+    color: var(--soft-gold);
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-section li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .contact-section button {
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: var(--slate-blue);
+    color: var(--ivory);
+    border: none;
+    border-radius: 6px;
+  }
+  
+  .contact-section a {
+    color: var(--soft-gold);
+    text-decoration: none;
+  }
+  
   
   
