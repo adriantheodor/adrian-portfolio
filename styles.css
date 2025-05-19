@@ -1,0 +1,42 @@
+/* Base palette */
+:root {
+    --charcoal: #2E2E2E;
+    --soft-gold: #D4AF37;
+    --slate-blue: #6A7BA2;
+    --ivory: #FDFBF9;
+    --muted-olive: #A9B388;
+  }
+  
+  /* Global styles */
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--ivory);
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+  
+  header, footer {
+    background-color: var(--charcoal);
+    color: var(--ivory);
+    text-align: center;
+    padding: 1.5em;
+  }
+  
+  a {
+    color: var(--slate-blue);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--soft-gold);
+  }
+  
+  h1, h2 {
+    margin: 0.5em 0;
+  }
+  
+  section {
+    padding: 2em;
+  }
+  
