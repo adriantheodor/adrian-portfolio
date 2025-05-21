@@ -53,18 +53,20 @@ footer {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .magic-button:hover {
   background-color: var(--soft-gold);
   color: var(--charcoal);
+  transform: translateY(-2px);
 }
 
 /* Links */
 a {
   color: var(--slate-blue);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -91,6 +93,7 @@ section {
 
 .project-card {
   background-color: var(--charcoal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -124,10 +127,17 @@ section {
   border-radius: 8px;
   margin-bottom: 2rem;
   color: var(--ivory);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-entry h4 {
   color: var(--muted-olive);
+}
+
+.project-card:hover,
+.education-entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
@@ -169,3 +179,23 @@ section {
   background-color: var(--soft-gold);
   color: var(--charcoal);
 }
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
