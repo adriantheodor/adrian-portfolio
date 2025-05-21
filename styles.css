@@ -49,26 +49,6 @@ footer {
   font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Magic Button */
-.magic-button {
-  background-color: var(--muted-olive);
-  color: var(--ivory);
-  border: none;
-  padding: 0.75em 1.5em;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Helvetica Neue', sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.magic-button:hover {
-  background-color: var(--soft-gold);
-  font-family: 'Helvetica Neue', sans-serif;
-  color: var(--charcoal);
-  transform: translateY(-2px);
-}
-
 /* Links */
 a {
   color: var(--slate-blue);
