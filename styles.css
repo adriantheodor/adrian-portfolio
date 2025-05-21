@@ -1,197 +1,171 @@
 /* Base palette */
 :root {
-    --charcoal: #2E2E2E;
-    --soft-gold: #D4AF37;
-    --slate-blue: #6A7BA2;
-    --ivory: #FDFBF9;
-    --muted-olive: #A9B388;
-  }
-  
-  /* Global styles */
-  body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: var(--ivory);
-    color: var(--charcoal);
-    line-height: 1.6;
-  }
-  
-  header, footer {
-    background-color: var(--charcoal);
-    color: var(--ivory);
-    text-align: center;
-    padding: 1.5em;
-  }
+  --charcoal: #2E2E2E;
+  --soft-gold: #D4AF37;
+  --slate-blue: #6A7BA2;
+  --ivory: #FDFBF9;
+  --muted-olive: #A9B388;
+}
 
-  .magic-button {
-    background-color: var(--muted-olive);
-    color: var(--ivory);
-    border: none;
-    padding: 0.75em 1.5em;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .magic-button:hover {
-    background-color: var(--soft-gold);
-    color: var(--charcoal);
-  }
-  
-  
-  a {
-    color: var(--slate-blue);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: var(--soft-gold);
-  }
-  
-  h1 {
-    color: var(--soft-gold);
-    font-size: 2.5rem;
-    text-align: center;
-  }
-  
-  h2 {
-    color: var(--slate-blue);
-    font-size: 1.8rem;
-    margin-bottom: 0.5em;
-  }
+/* Bootstrap Overrides and Custom Additions */
+body {
+  background-color: var(--charcoal);
+  color: var(--charcoal);
+  font-family: 'Helvetica Neue', sans-serif;
+}
 
-  section {
-    padding: 2em;
-  }
-
-  .banner {
-    text-align: center;
-    padding: 4rem 1rem;
-    background-color: var(--charcoal);
-    color: var(--ivory);
-  }
-  
-  .banner h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    color: var(--muted-olive);
-  }
-  
-  .banner h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--slate-blue);
-  }
-
-  .contact-section {
-    background-color: var(--charcoal);
-    color: var(--ivory);
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .contact-section h3 {
-    font-size: 2rem;
-    color: var(--soft-gold);
-    margin-bottom: 1rem;
-  }
-  
-  .contact-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-section li {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-  
-  .contact-section button {
-    margin-left: 0.5rem;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-    cursor: pointer;
-    background-color: var(--slate-blue);
-    color: var(--ivory);
-    border: none;
-    border-radius: 6px;
-  }
-  
-  .contact-section a {
-    color: var(--soft-gold);
-    text-decoration: none;
-  }
-  
-  .projects-section {
-  background-color: var(--forest-green);
+/* Header and Footer */
+header, footer {
+  background-color: var(--charcoal);
   color: var(--ivory);
-  padding: 2rem;
   text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+/* Banner Section */
+.banner {
+  background-color: var(--charcoal);
+  padding: 4rem 1rem;
+}
+
+.banner h1 {
+  color: var(--muted-olive);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--charcoal);
+}
+
+/* Magic Button */
+.magic-button {
+  background-color: var(--muted-olive);
+  color: var(--ivory);
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.magic-button:hover {
+  background-color: var(--soft-gold);
+  color: var(--charcoal);
+}
+
+/* Links */
+a {
+  color: var(--slate-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--soft-gold);
+  text-decoration: underline;
+}
+
+/* Section Spacing */
+section {
+  padding: 3rem 1rem;
+}
+
+/* Projects Section */
+.projects-section {
+  background-color: var(--charcoal);
+  color: var(--ivory);
 }
 
 .projects-section h3 {
   font-size: 2.5rem;
-  color: var(--soft-gold);
+  color: var(--ivory);
   margin-bottom: 2rem;
 }
 
 .project-card {
   background-color: var(--charcoal);
-  margin: 1rem auto;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  text-align: left;
+  margin-bottom: 2rem;
+  color: var(--ivory);
 }
 
 .project-card h4 {
   color: var(--muted-olive);
-  margin-bottom: 0.5rem;
-}
-
-.project-card p {
-  margin-bottom: 0.5rem;
 }
 
 .project-card a {
   color: var(--soft-gold);
-  text-decoration: none;
   font-weight: bold;
 }
 
+/* Education Section */
 .education-section {
-  background-color: var(--deep-forest);
+  background-color: var(--charcoal);
   color: var(--ivory);
-  padding: 2rem;
-  text-align: center;
 }
 
 .education-section h3 {
   font-size: 2.5rem;
-  color: var(--soft-gold);
+  color: var(--ivory);
   margin-bottom: 2rem;
 }
 
 .education-entry {
   background-color: var(--charcoal);
-  margin: 1rem auto;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  text-align: left;
+  margin-bottom: 2rem;
+  color: var(--ivory);
 }
 
 .education-entry h4 {
   color: var(--muted-olive);
-  margin-bottom: 0.5rem;
 }
 
-.education-entry p {
-  margin: 0.25rem 0;
+/* Contact Section */
+.contact-section {
+  background-color: var(--charcoal);
+  color: var(--ivory);
 }
 
-  
-  
+.contact-section h3 {
+  font-size: 2rem;
+  color: var(--ivory);
+  margin-bottom: 1.5rem;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.contact-section li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-section button {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  background-color: var(--slate-blue);
+  color: var(--ivory);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: var(--soft-gold);
+  color: var(--charcoal);
+}
