@@ -98,6 +98,7 @@ section {
   border-radius: 8px;
   margin-bottom: 2rem;
   color: var(--ivory);
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .project-card h4 {
@@ -199,3 +200,23 @@ p {
   opacity: 1;
 }
 
+.screenshot-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.project-img {
+  flex: 1 1 45%; /* allows two images per row with some flexibility */
+  max-width: 45%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.02);
+}
