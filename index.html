@@ -23,14 +23,23 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <button class="nav-link btn btn-link" onclick="showSection('projects')">Projects</button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
+            <button class="nav-link btn btn-link" onclick="showSection('education')">Education</button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contacts">Contact</a>
+            <button class="nav-link btn btn-link" onclick="showSection('contacts')">Contact</button>
           </li>
+          <li class="nav-item d-flex align-items-center ms-3">
+          <div class="form-check form-switch text-light">
+          <input class="form-check-input" type="checkbox" id="darkModeToggle" />
+          <label class="form-check-label" for="darkModeToggle">
+          <span id="theme-icon">🌞</span>
+    </label>
+  </div>
+</li>
+
         </ul>
       </div>
     </div>
@@ -46,8 +55,7 @@
 
   <main>
     <!-- Projects Section -->
-    
-    <section class="projects-section" id="projects">
+    <section class="projects-section d-none" id="projects">
       <div class="text-center mb-4">
         <h3>Projects</h3>
       </div>
@@ -60,7 +68,6 @@
               <div class="screenshot-row">
                 <img src="images/logo.png" alt="Greenthumb Logo" class="project-img">
               </div>
-              
             </div>
           </div>
         </div>
@@ -68,7 +75,7 @@
         <div class="col-md-4">
           <div class="card h-100 bg-secondary text-white" data-aos="fade-up">
             <div class="card-body">
-              <h5 class="card-title">📺 Anime Database Web App</h5>
+              <h5 class="card-title">🎮 Anime Database Web App</h5>
               <p class="card-text">A responsive MERN stack web app that lets users browse and filter anime titles. Features MongoDB integration and API calls.</p>
             </div>
           </div>
@@ -87,24 +94,22 @@
     </section>
 
     <!-- Education Section -->
-    <section class="education-section" id="education">
+    <section class="education-section d-none" id="education">
       <h3 class="text-center mb-4">Education</h3>
       <div class="bg-secondary project-card">
         <h4>Northeastern University</h4>
         <p>Master of Science in Computer Science</p>
-        <p><strong>GPA:</strong> 3.5</p>
         <p><strong>Focus Areas:</strong> Machine Learning, NLP, Full Stack Development</p>
       </div>
       <div class="bg-secondary project-card">
         <h4>Savannah College of Art and Design</h4>
         <p>Bachelor of Fine Arts in Film and Television</p>
-        <p><strong>GPA:</strong> 3.8</p>
         <p><strong>Focus Areas:</strong> Video Editing, Cinematography, Creative Storytelling</p>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" data-aos="fade-in" id="contacts">
+    <section class="contact-section d-none" data-aos="fade-in" id="contacts">
       <h3 class="text-center mb-4">Contact Me</h3>
       <ul class="list-group text-dark">
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -138,12 +143,51 @@
         alert(`Copied: ${text}`);
       });
     }
+
+    function showSection(id) {
+      document.querySelectorAll('main section').forEach(section => {
+        section.classList.add('d-none');
+      });
+      document.getElementById(id).classList.remove('d-none');
+    }
+
+    // Optionally show one section on load
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('projects');
+    });
   </script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  
+
+  <script>
+  const toggle = document.getElementById('darkModeToggle');
+  const icon = document.getElementById('theme-icon');
+  const body = document.body;
+
+  // Initialize toggle from localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  }
+
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+      icon.textContent = '🌙';
+    } else {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+      icon.textContent = '🌞';
+    }
+  });
+</script>
+
+
   <style>
     html {
       scroll-behavior: smooth;
