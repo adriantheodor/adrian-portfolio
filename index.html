@@ -14,8 +14,30 @@
 </head>
 <body class="body">
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Adrian Theodor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Header -->
-  <header class="text-center py-5">
+  <header class="text-center py-5 mt-5">
     <div class="container">
       <h1 class="">Adrian Theodor</h1>
       <h2 class="h5 mt-2">Software Development | Data Mining | Machine Learning</h2>
@@ -23,10 +45,9 @@
   </header>
 
   <main>
-
     <!-- Projects Section -->
-    <button onclick="toggleSection('projects')">Show Projects</button>
-    <section class="projects-section" id="projects" style="display: none;">
+    
+    <section class="projects-section" id="projects">
       <div class="text-center mb-4">
         <h3>Projects</h3>
       </div>
@@ -66,8 +87,7 @@
     </section>
 
     <!-- Education Section -->
-    <button onclick="toggleSection('education')">Show Education</button>
-    <section class="education-section" id="education" style="display: none;">
+    <section class="education-section" id="education">
       <h3 class="text-center mb-4">Education</h3>
       <div class="bg-secondary project-card">
         <h4>Northeastern University</h4>
@@ -84,8 +104,7 @@
     </section>
 
     <!-- Contact Section -->
-    <button onclick="toggleSection('contacts')">Show Contact Information</button>
-    <section class="contact-section" data-aos="fade-in" id="contacts" style="display: none;">
+    <section class="contact-section" data-aos="fade-in" id="contacts">
       <h3 class="text-center mb-4">Contact Me</h3>
       <ul class="list-group text-dark">
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -124,11 +143,12 @@
   <script>
     AOS.init();
   </script>
-  <script>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      section.style.display = section.style.display === 'none' ? 'block' : 'none';}
-  </script>
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 
 </body>
 </html>
